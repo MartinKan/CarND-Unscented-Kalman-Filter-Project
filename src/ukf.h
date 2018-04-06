@@ -5,6 +5,7 @@
 #include "Eigen/Dense"
 #include <vector>
 #include <string>
+#include <iostream>
 #include <fstream>
 
 using Eigen::MatrixXd;
@@ -66,6 +67,10 @@ public:
 
   ///* Sigma point spreading parameter
   double lambda_;
+
+  // FOR DEBUGGING PURPOSES
+  std::ofstream myfile;
+  int step;
 
 
   /**
