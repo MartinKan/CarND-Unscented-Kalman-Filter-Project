@@ -69,8 +69,8 @@ public:
   double lambda_;
 
   // FOR DEBUGGING PURPOSES
-  std::ofstream myfile;
-  int step;
+  // std::ofstream myfile;
+  // int step;
 
 
   /**

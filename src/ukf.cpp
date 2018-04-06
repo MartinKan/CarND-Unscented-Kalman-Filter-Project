@@ -123,14 +123,14 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
     }
 
     // FOR DEBUGGING PURPOSES
-    myfile.open ("log.txt");
-    if (myfile.is_open())
-    {
+    // myfile.open ("log.txt");
+    // if (myfile.is_open())
+    // {
 
-      myfile << "BEGIN DEBUGGING" "\n";
-      myfile.close();
-    }
-    step = 0;
+    //   myfile << "BEGIN DEBUGGING" "\n";
+    //   myfile.close();
+    // }
+    // step = 0;
 
     // done initializing, no need to predict or update
     is_initialized_ = true;
@@ -138,9 +138,9 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
   }
 
   // FOR DEBUGGING PURPOSES
-  
-  step++;
-  
+  //
+  // step++;
+  //
   // myfile.open ("log.txt", ios::app);
   // if (myfile.is_open())
   // {
@@ -379,12 +379,12 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   double NIS = z1.transpose() * S.inverse() * z1;
 
   // FOR DEBUGGING PURPOSES
-  myfile.open ("log.txt", ios::app);
-  if (myfile.is_open())
-  {
-   myfile << "Lidar NIS: " << NIS << "\n";
-   myfile.close();
-  }
+  // myfile.open ("log.txt", ios::app);
+  // if (myfile.is_open())
+  // {
+  //  myfile << "Lidar NIS: " << NIS << "\n";
+  //  myfile.close();
+  // }
 
 }
 
@@ -490,11 +490,11 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   double NIS = z1.transpose() * S.inverse() * z1;
 
   // FOR DEBUGGING PURPOSES
-  myfile.open ("log.txt", ios::app);
-  if (myfile.is_open())
-  {
-   myfile << "Radar NIS: " << NIS << "\n";
-   myfile.close();
-  }
+  // myfile.open ("log.txt", ios::app);
+  // if (myfile.is_open())
+  // {
+  //  myfile << "Radar NIS: " << NIS << "\n";
+  //  myfile.close();
+  // }
 
 }
